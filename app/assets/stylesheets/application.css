@@ -40,3 +40,23 @@ a {
     color: #E7651A;
     text-decoration: none;
 }
+
+.topnav {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color:#CACBD0;
+    padding: 14px 16px;
+    font-family: Future;
+    font-size: large;
+}
+
+.topnav a {
+    color: #00243D;
+}
+
+.topnav a:hover {
+    
+    color: darkorange;
+  }

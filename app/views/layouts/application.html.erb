@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<html lang="en">
   <head>
     <title>Starfinder2</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -12,12 +13,22 @@
 
   <div class="header">
     <div class="image-dice">
-        <%= link_to image_tag("/StarDieResized2.jpg"), root_url%>
+        <%= link_to image_tag("/StarDieResized2.jpg", alt: "Starfinder Dice"), root_url%>
         <h1>&nbsp<%= link_to " Starfinder Companion II", root_url%></h1>
     </div>
 </div>
 
+<div class="topnav">
+
+<%= link_to "Characters", "#" %>
+<%= link_to "Campaigns", "#" %>
+<%= link_to "Starships", "#" %>
+<%= link_to "Sign In", "#" %>
+
+</div>
+
   <body>
+  
     <%= yield %>
   </body>
 </html>
