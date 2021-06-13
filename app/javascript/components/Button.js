@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from './Image'
+import CreatorCard from './CreatorCard'
 
 class Button extends React.Component {
 
@@ -16,7 +16,7 @@ class Button extends React.Component {
         return(
             <div className="center-screen">
                 {!this.state.showImage && <button onClick={this.handleClick.bind(this)}>Enter</button>}
-                {this.state.showImage && <Image />}
+                {this.state.showImage && <CreatorCard />}
             </div>
         )
     }
