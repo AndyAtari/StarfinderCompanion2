@@ -23,12 +23,16 @@
 <%= link_to "Characters", "#" %>
 <%= link_to "Dice", "#" %>
 <%= link_to "Starships", "#" %>
-<%= link_to "Sign In", "#" %>
+<%= link_to "Sign In", new_user_path %>
 
 </div>
 
   <body>
     <%= render 'shared/messages' %>
     <%= yield %>
+    <div class="footer">
+    <p><a href="https://github.com/AndyAtari/StarfinderCompanion2" target="_blank" > Designed by Andy Atari</a></p>
+    <p><a href="https://paizo.com/starfinder" target="_blank"> Official Paizo Website</a></p>
+    </div>
   </body>
 </html>
