@@ -154,3 +154,12 @@ a {
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%)
   }
+
+  #error_explanation {
+    color: red;
+    background-color: #0D1117;
+  }
+
+  .field_with_errors input {
+    border: 1px solid red !important;
+  }
