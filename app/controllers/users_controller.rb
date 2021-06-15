@@ -21,7 +21,12 @@ class UsersController < ApplicationController
     end
 
     def update
-        
+        if @user.update(user_params)
+            flash[:success] = "Your account was updated successfully"
+            redirect_to root_url
+        else
+            render "edit"
+        end 
     end
 
     private 
