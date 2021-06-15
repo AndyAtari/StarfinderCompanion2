@@ -21,6 +21,11 @@
         </div>
 
         <div class="break">
+            <%= f.label :password %><br>
+            <%= f.password_field :password_confirmation, placeholder: "Confirm Password" %>
+        </div>
+
+        <div class="break">
             <%= f.submit %> 
         </div>
     </div>
