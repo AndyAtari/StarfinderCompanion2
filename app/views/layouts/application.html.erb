@@ -14,19 +14,26 @@
   <div class="header">
     <div class="image-dice">
         <%= link_to image_tag("/StarDieResized2.jpg", alt: "Starfinder Dice"), root_url%>
-        <h1>&nbsp<%= link_to " Starfinder Companion II", root_url%></h1>
+        <h1>
+        <% if current_user %>
+        &nbsp<%= link_to "#{current_user.username.possessive} Starfinder Companion II", root_url%>
+        <% else %>
+        &nbsp<%= link_to " Starfinder Companion II", root_url%>
+        <% end %>
+        </h1>
     </div>
 </div>
 
 <div class="topnav">
-
-<%= link_to "Characters", "#" %>
-<%= link_to "Dice", "#" %>
-<%= link_to "Starships", "#" %>
-<%= link_to "Sign Up", new_user_path %>
-<%= link_to "Sign In", "/signin" %>
-<%= link_to "Sign Out", "#" %>
-
+  <% if current_user %>
+    <%= link_to "Characters", "#" %>
+    <%= link_to "Dice", "#" %>
+    <%= link_to "Starships", "#" %>
+    <%= link_to "Sign Out", signout_path, method: :delete %>
+  <% else %>
+    <%= link_to "Sign In", "/signin" %>
+    <%= link_to "Sign Up", new_user_path %>
+  <% end %>
 </div>
 
   <body>
