@@ -2,9 +2,9 @@ Rails.application.routes.draw do
 
   root 'site#index'
   
-  get 'login', to: 'sessions#new'
-  post 'login', to: 'sessions#create'
-  delete 'logout', to: 'sessions#destroy'
+  get 'signin', to: 'sessions#new'
+  post 'signin', to: 'sessions#create'
+  delete 'signout', to: 'sessions#destroy'
 
   
   resources :users, only: [:new, :create, :edit, :update]
