@@ -28,7 +28,7 @@
   <% if current_user %>
     <%= link_to "Characters", "#" %>
     <%= link_to "Dice", "#" %>
-    <%= link_to "Starships", "#" %>
+    <%= link_to "Starships", starships_path %>
     <%= link_to "Sign Out", signout_path, method: :delete %>
   <% else %>
     <%= link_to "Sign In", "/signin" %>

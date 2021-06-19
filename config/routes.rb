@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   resources :starships
+  
   root 'site#index'
   
   get 'signin', to: 'sessions#new'
